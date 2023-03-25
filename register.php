@@ -229,11 +229,13 @@
 	
    include("connectdb.php");
     
-		$sql = "INSERT INTO customer (`cus_id`, `cus_name`, `cus_phone`, `cus_adress`, `cus_user`, `cus_pwd`) VALUES ('0', '{$_POST['cus_name']}', 
-        '{$_POST['cus_phone']}', '{$_POST['cus_adress']}', '{$_POST['cus_user']}', '".md5($_POST['cus_pwd'])."');";
-		mysqli_query($conn, $sql) or die (mysqli_error($conn));
+		
         
-
+echo "<script>";
+		echo "alert('สมัครสำเร็จ');";
+        echo "window.location='memberlogin.php';";
+		echo "</script>";
+		
 		
 	}
 ?>

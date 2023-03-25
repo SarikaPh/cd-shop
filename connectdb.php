@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <?php
-$host = "35.240.247.72";
+$host = "localhost";
 	$user = "root";
 	$pwd = "12345678";
 	$db = "cd-album";

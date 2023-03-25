@@ -10,7 +10,7 @@
 			@$total += $sum[$pid] ;
 		}
 
-	$sql = "INSERT INTO `order` (`o_id`, `o_total`, `o_date`, `o_member`) VALUES ("", '$total', CURRENT_TIMESTAMP, '".$_SESSION['ses_id']."');" ;
+	$sql = "INSERT INTO `order` (`o_id`, `o_total`, `o_date`, `o_member`) VALUES ('', '$total', CURRENT_TIMESTAMP, '".$_SESSION['ses_id']."');" ;
 	
 	mysqli_query($conn, $sql) or die(mysqli_error($conn)) ;
 	$id = mysqli_insert_id($conn);

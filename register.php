@@ -227,11 +227,9 @@
                     <?php
 	if (isset($_POST['Submit'])){
 	
-    $conn=mysqli_connect("localhost","root","12345678")or die("เชื่อมต่อฐานข้อมูลไม่ได้");
-    mysqli_select_db($conn,"cd-album")or die("เลือกฐานข้อมูลไม่ได้");
-    mysqli_query($conn,"SET NAMES utf8"); //ทำให้อ่านข้อมูลที่เป็นภาษาไทยได้
+   include("connectdb.php");
     
-		$sql = "INSERT INTO customer (cus_id, cus_name, cus_phone, cus_adress, cus_user, cus_pwd) VALUES ('', '{$_POST['cus_name']}', 
+		$sql = "INSERT INTO customer (cus_id, cus_name, cus_phone, cus_adress, cus_user, cus_pwd) VALUES ('0', '{$_POST['cus_name']}', 
         '{$_POST['cus_phone']}', '{$_POST['cus_adress']}', '{$_POST['cus_user']}', '".md5($_POST['cus_pwd'])."');";
 		mysqli_query($conn, $sql) or die ("insert ไม่ได้");
         

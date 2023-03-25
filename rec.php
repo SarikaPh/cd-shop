@@ -17,7 +17,7 @@
 	
 	foreach($_SESSION['ida'] as $pid) {
 		
-		$sql2 = "INSERT INTO `order_detail` (`od_id`, `o_id`, `pid`, `item`) VALUES ('NULL', '$id', '".$_SESSION['ida'][$pid]."', '".$_SESSION['itema'][$pid]."');" ;
+		$sql2 = "INSERT INTO `order_detail` (`od_id`, `o_id`, `pid`, `item`) VALUES ('0', '$id', '".$_SESSION['ida'][$pid]."', '".$_SESSION['itema'][$pid]."');" ;
 		mysqli_query($conn, $sql2)or die(mysqli_error($conn)) ;
 	}
 

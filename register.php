@@ -234,10 +234,6 @@
 		mysqli_query($conn, $sql) or die (mysqli_error($conn));
         
 
-		echo "<script>";
-		echo "alert('สมัครสำเร็จ');";
-        echo "window.location='memberlogin.php';";
-		echo "</script>";
 		
 	}
 ?>
